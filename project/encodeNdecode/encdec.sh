@@ -3,9 +3,12 @@
 ## File Encryption and Decreption
 
 echo "Enter file name"
-read -r fname
+read -p "Name:"  fname
+# EXT=".txt"
+# FILES=${fname}${EXT}
+# echo $FILES
 
-if [ -f $fname ] 
+if [ -f ${fname} ] 
 then  
     echo "-----File Content decreption-----"
     cat $fname | base64 -d

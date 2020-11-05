@@ -1,0 +1,21 @@
+1.is the commad is shell built or not? 
+    type -a [command] -> type -a echo
+
+2.how to use shell built commands and not build command?
+    help [command] | less -> help echo | less 
+    man [command] | less -> man uptime
+ 
+3.# single quotes cause variable to not get expand
+4.# "man bash" -> 'shell variable' for shoing the bash default variable
+  # 'n' for down  shift + n for up
+
+5.# test is a shell bullatin 'type -a test'
+  # help test | less 
+
+6.# exit is a shell bullatin.
+
+7.# special variable called ? in Bash. 
+  # This variable is reserved, and in it the result code of the command that was most recently executed. 
+  # A result code is the program’s way of telling you if the program terminated successfully or not.
+
+8.# "${comment}":- within ".." means single argument, without means separate arguments 
