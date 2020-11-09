@@ -19,3 +19,35 @@
   # A result code is the program’s way of telling you if the program terminated successfully or not.
 
 8.# "${comment}":- within ".." means single argument, without means separate arguments 
+9.# RANDOM is shell variable, getting info about that take a look at man pages shell variable.
+10.# RANDOM -> geterates integers ,each time it reference.
+     date [%s%t] ->  to geterates date and use formatting options to formatting output.
+     sha256sum
+     head -> to see top or begining line or character.
+     fold -> transform single line of text into multiline.
+     shuf -> randomly select a line
+     basename -> strip directory and suffix from filenames
+     dirname ->  strip last component from file name
+
+11.# ${*} makes all in one argument and ${@} makes all in different argument 
+12.# shift -> Rename the positional parameters $N+1 to $1 If N is
+     not given, it is assumed to be 1.
+13.# There are three types of I/O in linux.
+      1. standerd input
+      2. standerd output
+      3. standerd error
+14.# On Linux, the set of file descriptors open in a process can be accessed under the path /proc/PID/fd/,where PID is the process identifier. 
+     In Unix-like systems, file descriptors can refer to any Unix file type named in a file system.
+
+15.#(file-descriptors)fd 0 - STDIN
+                      fd 1 - STDOUT
+                      fd 2 - STDERR
+    redirect to file(file is not present it creates and overwrite):  command > file
+    append to file: command >> file
+    STDIN and STDOUT redirect to file: command &> file
+    STDOUT redirect to file: command >&1 file or command >1 file
+    STDERR redirect to file: commad >&2 file or command >2 file
+    STDIN and STDOUT through pipe: command |& command   
+    STDIN from a file: command < file
+    
+16.# /dev/null is a bucket to store error msg if u dont want see in your code 

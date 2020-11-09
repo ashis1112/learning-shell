@@ -18,6 +18,8 @@ read -p "Enter the username to create:" USER_NAME
 # Get the real name (contents for the descriptions field)
 read -p "Enter name of the person that will be using this account:" COMMENT
 
+read -p "Enter the password to create:" PASSWORD
+
 # create the account
 useradd -c "${COMMENT}" -m "${USER_NAME}"
 
@@ -31,7 +33,8 @@ then
 fi
 
 # set the password
-echo ${PASSWORD} | passwd --stdin ${USER_NAME}
+
+echo "${USERNAME}:${PASSWORD}" | chpasswd
 
 if [[ "${?}" -ne 0 ]]
 then 
